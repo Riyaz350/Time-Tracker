@@ -8,14 +8,20 @@ import {
 import AuthProvider from './Authentication/AuthProvider.jsx';
 import Home from './Layout/Home/Home.jsx';
 import Dashboard from './Layout/Dashboard/Dashboard.jsx';
+import SignIn from './Authentication/SignIn/SignIn.jsx';
+import Register from './Authentication/Register/Register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
     children: [
       {
-        path: "contacts/:contactId",
-        // element: <Contact />,
+        path: "/logIn",
+        element:<SignIn></SignIn>
+      },
+      {
+        path: "/register",
+        element:<Register></Register>
       },
     ],
   },
